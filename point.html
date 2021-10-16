@@ -45,6 +45,35 @@
             context.strokeStyle = "#c0c0c0";
             context.stroke();
         }
+
+        context.beginPath();
+
+        // eje x
+        context.moveTo(5, 305);
+        context.lineTo(605, 305);
+
+        // eje y
+        context.moveTo(305, 5);
+        context.lineTo(305, 605);
+
+        for (let i = 5; i < 606; i = i + 30) {
+            // lineas punteadas verticales del eje x --|--|--|--
+            context.moveTo(i, 302);
+            context.lineTo(i, 307);
+
+            // lineas punteadas horizontales del eje y
+            context.moveTo(302, i);
+            context.lineTo(307, i);
+
+            // numeros del eje x
+            context.fillText(((i - 5) / 30) - 10, i - 5, 315);
+
+            // numeros del eje y
+            context.fillText( -((i - 5) / 30) + 10, 307, i + 5);
+        }
+
+        context.strokeStyle = '#ff0000';
+        context.stroke();
     </script>
 </body>
 </html>
