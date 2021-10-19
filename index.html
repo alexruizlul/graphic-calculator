@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="#" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Calculadora Gráfica</title>
 </head>
 <body>
-    <header>
-        <h1>Calculadora Gráfica</h1>
+    <header class="my-16 text-center text-3xl font-bold ">
+        <h1 class="text-blue-500">Calculadora Gráfica</h1>
     </header>
-    <section>
-        <nav>
-            <ol>
-                <li>
-                    <a href="./point.html">Graficar punto en plano cartesiano</a>
-                </li>
-                <li>
-                    <a href="./bar-chart.html">Crear gráfico de 5 barras</a>
-                </li>
-            </ol>
-        </nav>
-    </section>
+    <main class="md:flex">
+        <article class="bg-white shadow-md rounded-3xl p-8 max-w-md mx-auto my-8">
+            <img src="https://geometriamagicomundodelorigami.files.wordpress.com/2016/12/plano-cartesiano.png?w=840" class="mx-auto w-1/2" />
+            <div class="text-center py-8 text-base leading-6 space-y-4 text-gray-700 text-lg leading-7">
+                <p>Graficar punto en plano cartesiano</p>
+            </div>
+            <div class="flex justify-center">
+                <a href="./cartesian-plane.html">
+                    <button type="button" class="rounded-lg font-bold text-white py-2 px-6 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">Probar</button>
+                </a>
+            </div>
+        </article>
+        <article class="bg-white shadow-md rounded-3xl p-8 max-w-md mx-auto my-8">
+            <img src="https://docs.tibco.com/pub/spotfire_web_player/6.0.0-november-2013/es-ES/WebHelp/GUID-418B2936-C878-4771-B874-FA8ECAA39941-display.png" class="h-48 mx-auto w-1/2" />
+            <div class="text-center py-8 text-base leading-6 space-y-4 text-gray-700 text-lg leading-7">
+                <p>Crear gráfico de 5 barras</p>
+            </div>
+            <div class="flex justify-center">
+                <a href="./bar-chart.html">
+                    <button type="button" class="rounded-lg font-bold text-white py-2 px-6 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">Probar</button>
+                </a>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
