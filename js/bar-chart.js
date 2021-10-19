@@ -69,14 +69,43 @@ function drawCartesianPlane() {
     context.stroke();
 }
 
-function graficarBarras() {
+function coordinateX(valueAxis) {
+    let coordinateX = 5 + (30 * (valueAxis + 10));
+    return coordinateX;
+}
+
+function coordinateY(valueAxis) {
+    let coordinateY = 5 - (30 * (valueAxis - 10));
+    return coordinateY;
+}
+
+function createBarOn(coordinateX, coordinateY, color) {
     let context = getCanvaContext();
+
+    context.beginPath();
+    context.lineWidth = 26;
+    context.strokeStyle = color;
+    context.moveTo(coordinateX, 305);
+    context.lineTo(coordinateX, coordinateY);
+    context.stroke();
+}
+
+function graficarBarras() {
 
     const inputAxisX_B1 = document.getElementById('InputAxisX_B1');
     const inputAxisY_B1 = document.getElementById('InputAxisY_B1');
 
     const inputAxisX_B2 = document.getElementById('InputAxisX_B2');
     const inputAxisY_B2 = document.getElementById('InputAxisY_B2');
+
+    const inputAxisX_B3 = document.getElementById('InputAxisX_B3');
+    const inputAxisY_B3 = document.getElementById('InputAxisY_B3');
+
+    const inputAxisX_B4 = document.getElementById('InputAxisX_B4');
+    const inputAxisY_B4 = document.getElementById('InputAxisY_B4');
+
+    const inputAxisX_B5 = document.getElementById('InputAxisX_B5');
+    const inputAxisY_B5 = document.getElementById('InputAxisY_B5');
 
     // VALUES
     const valueAxisX_B1 = parseFloat(inputAxisX_B1.value);
@@ -85,28 +114,40 @@ function graficarBarras() {
     const valueAxisX_B2 = parseFloat(inputAxisX_B2.value);
     const valueAxisY_B2 = parseFloat(inputAxisY_B2.value, 10);
 
+    const valueAxisX_B3 = parseFloat(inputAxisX_B3.value);
+    const valueAxisY_B3 = parseFloat(inputAxisY_B3.value, 10);
+
+    const valueAxisX_B4 = parseFloat(inputAxisX_B4.value);
+    const valueAxisY_B4 = parseFloat(inputAxisY_B4.value, 10);
+
+    const valueAxisX_B5 = parseFloat(inputAxisX_B5.value);
+    const valueAxisY_B5 = parseFloat(inputAxisY_B5.value, 10);
+
     // COORDINATES
     // TODO: Create function that calculates the coordinate
-    let coordinateX_B1 = 5 + (30 * (valueAxisX_B1 + 10));
-    let coordinateY_B1 = 5 - (30 * (valueAxisY_B1 - 10));
+    let coordinateX_B1 = coordinateX(valueAxisX_B1);
+    let coordinateY_B1 = coordinateY(valueAxisY_B1);
 
-    let coordinateX_B2 = 5 + (30 * (valueAxisX_B2 + 10));
-    let coordinateY_B2 = 5 - (30 * (valueAxisY_B2 - 10));
+    let coordinateX_B2 = coordinateX(valueAxisX_B2);
+    let coordinateY_B2 = coordinateY(valueAxisY_B2);
+
+    let coordinateX_B3 = coordinateX(valueAxisX_B3);
+    let coordinateY_B3 = coordinateY(valueAxisY_B3);
+
+    let coordinateX_B4 = coordinateX(valueAxisX_B4);
+    let coordinateY_B4 = coordinateY(valueAxisY_B4);
+
+    let coordinateX_B5 = coordinateX(valueAxisX_B5);
+    let coordinateY_B5 = coordinateY(valueAxisY_B5);
+
+    
 
     // TODO: Create function that draws the bar with the specified coordinates.
-    context.beginPath();
-    context.lineWidth = 26;
-    context.strokeStyle = 'orange';
-    context.moveTo(coordinateX_B1, 305);
-    context.lineTo(coordinateX_B1, coordinateY_B1);
-    context.stroke();
-
-    context.beginPath();
-    context.lineWidth = 26;
-    context.strokeStyle = 'green';
-    context.moveTo(coordinateX_B2, 305);
-    context.lineTo(coordinateX_B2, coordinateY_B2);
-    context.stroke();
+    createBarOn(coordinateX_B1, coordinateY_B1, 'orange');
+    createBarOn(coordinateX_B2, coordinateY_B2, 'green');
+    createBarOn(coordinateX_B3, coordinateY_B3, 'blue');
+    createBarOn(coordinateX_B4, coordinateY_B4, 'red');
+    createBarOn(coordinateX_B5, coordinateY_B5, 'gray');
 }
 
 function limpiarCanvas() {
