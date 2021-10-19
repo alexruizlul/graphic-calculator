@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Gráfica de 5 barras</title>
 </head>
 <body>
@@ -11,43 +12,97 @@
         <canvas id="grid" width="610" height="610" style="border:1px solid #00ff00;"></canvas>
     </center>
 
-    <section>
-        <form>
+    <footer>
+        <form class="mt-8 py-2 sm:flex justify-center content-center">
             <!-- ******* BARRA 1 *********** -->
-            <div>
-                <p>Barra 1</p>
-                <label for="InputAxisX_B1">
-                    Eje X:
-                </label>
-                <input type="number" id="InputAxisX_B1">
-            </div>
-            <div>
-                <label for="InputAxisY_B1">
-                    Eje Y:
-                </label>
-                <input type="number" id="InputAxisY_B1">
+            <div id="barra1">
+                <div>
+                    <p>Barra 1</p>
+                    <label for="InputAxisX_B1">
+                        Eje X:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisX_B1">
+                </div>
+                <div>
+                    <label for="InputAxisY_B1">
+                        Eje Y:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisY_B1">
+                </div>
             </div>
             <!-- ******* BARRA 2 *********** -->
-            <div>
-                <p>Barra 2</p>
-                <label for="InputAxisX_B2">
-                    Eje X:
-                </label>
-                <input type="number" id="InputAxisX_B2">
+            <div id="barra2">
+                <div>
+                    <p>Barra 2</p>
+                    <label for="InputAxisX_B2">
+                        Eje X:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisX_B2">
+                </div>
+                <div>
+                    <label for="InputAxisY_B2">
+                        Eje Y:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisY_B2">
+                </div>
             </div>
-            <div>
-                <label for="InputAxisY_B2">
-                    Eje Y:
-                </label>
-                <input type="number" id="InputAxisY_B2">
+            <!-- ******* BARRA 3 *********** -->
+            <div id="barra3">
+                <div>
+                    <p>Barra 3</p>
+                    <label for="InputAxisX_B3">
+                        Eje X:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisX_B3">
+                </div>
+                <div>
+                    <label for="InputAxisY_B3">
+                        Eje Y:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisY_B3">
+                </div>
+            </div>
+            <!-- ******* BARRA 4 *********** -->
+            <div id="barra4">
+                <div>
+                    <p>Barra 4</p>
+                    <label for="InputAxisX_B4">
+                        Eje X:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisX_B4">
+                </div>
+                <div>
+                    <label for="InputAxisY_B4">
+                        Eje Y:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisY_B4">
+                </div>
+            </div>
+            <!-- ******* BARRA 5 *********** -->
+            <div id="barra5">
+                <div>
+                    <p>Barra 5</p>
+                    <label for="InputAxisX_B5">
+                        Eje X:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisX_B5">
+                </div>
+                <div>
+                    <label for="InputAxisY_B5">
+                        Eje Y:
+                    </label>
+                    <input class="border rounded-md w-1/4" type="number" id="InputAxisY_B5">
+                </div>
             </div>
 
-            <button type="button" onclick="graficarBarras()">
-                Graficar barras
-            </button>
-            <input type="reset" value="Reset" style="background-color: red; color: white" onclick="limpiarCanvas()" />                      
+            <div>
+                <button class="rounded-lg font-bold text-white py-2 px-6 bg-blue-500 hover:bg-blue-700" type="button" onclick="graficarBarras()">
+                    Graficar barras
+                </button>
+                <input class="rounded-lg font-bold text-white py-2 px-6 bg-red-500 hover:bg-red-700" type="reset" value="Reset" onclick="limpiarCanvas()" />
+            </div>
         </form>
-    </section>
+    </footer>
 
     <script src="./js/bar-chart.js"></script>
 </body>
