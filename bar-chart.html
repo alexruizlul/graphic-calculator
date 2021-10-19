@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gráfico de 5 barras</title>
+    <title>Gráfica de 5 barras</title>
 </head>
 <body>
-    <h1>Gráfico de 5 barras</h1>
+    <center id="center">
+        <canvas id="grid" width="610" height="610" style="border:1px solid #00ff00;"></canvas>
+    </center>
+
+    <section>
+        <form>
+            <!-- ******* BARRA 1 *********** -->
+            <div>
+                <p>Barra 1</p>
+                <label for="InputAxisX_B1">
+                    Eje X:
+                </label>
+                <input type="number" id="InputAxisX_B1">
+            </div>
+            <div>
+                <label for="InputAxisY_B1">
+                    Eje Y:
+                </label>
+                <input type="number" id="InputAxisY_B1">
+            </div>
+            <!-- ******* BARRA 2 *********** -->
+            <div>
+                <p>Barra 2</p>
+                <label for="InputAxisX_B2">
+                    Eje X:
+                </label>
+                <input type="number" id="InputAxisX_B2">
+            </div>
+            <div>
+                <label for="InputAxisY_B2">
+                    Eje Y:
+                </label>
+                <input type="number" id="InputAxisY_B2">
+            </div>
+
+            <button type="button" onclick="graficarBarras()">
+                Graficar barras
+            </button>
+            <input type="reset" value="Reset" style="background-color: red; color: white" onclick="limpiarCanvas()" />                      
+        </form>
+    </section>
+
+    <script src="./js/bar-chart.js"></script>
 </body>
 </html>
