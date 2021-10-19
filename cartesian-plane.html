@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Punto en plano cartesiano</title>
 </head>
 <body>
@@ -11,26 +12,24 @@
         <canvas id="grid" width="610" height="610" style="border:1px solid #00ff00;"></canvas>
     </center>
 
-    <section>
+    <footer class="mt-8 py-2 flex justify-center">
         <form>
-            <div>
+            <div class="mb-4">
                 <label for="InputAxisX">
                     Eje X:
                 </label>
-                <input type="number" id="InputAxisX">
+                <input class="border rounded-md w-1/4" type="number" id="InputAxisX">
             </div>
-            <div>
+            <div class="mb-4">
                 <label for="InputAxisY">
                     Eje Y:
                 </label>
-                <input type="number" id="InputAxisY">
+                <input class="border rounded-md w-1/4" type="number" id="InputAxisY">
             </div>
-            <button type="button" onclick="drawEmoji()">
-                Graficar punto
-            </button>
-            <input type="reset" value="Reset" style="background-color: red; color: white" onclick="cleanCanvas()" />                      
+                <button class="rounded-lg font-bold text-white py-2 px-6 bg-blue-500 hover:bg-blue-700" type="button" onclick="drawEmoji()">Graficar punto</button>
+                <input class="rounded-lg font-bold text-white py-2 px-6 bg-red-500 hover:bg-red-700" type="reset" value="Reset" onclick="cleanCanvas()" />                      
         </form>
-    </section>
+    </footer>
 
     <script src="./js/cartesian-plane.js"></script>
 </body>
